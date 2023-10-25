@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-primary {
+    background-color: #FF3811;
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.text-primary {
+    color: #FF3811;
+}
+
+.border-primary {
+    border: 1px solid #FF3811;
+    transition: 0.5ms;
+}
