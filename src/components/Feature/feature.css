@@ -1,0 +1,12 @@
+.custom-bg:hover{
+    background-color: #FF3811;
+}
+.custom-bg:hover .custom-text-color{
+    color: #FFF;
+}
+.custom-text-color{
+    color: #FF3811;
+}
+.custom-bg:hover h2{
+    color: #fff;
+}

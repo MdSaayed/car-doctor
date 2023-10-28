@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
-import logo from "../../../public/logo.svg";
-import search from "../../../icons/search.png";
-import cartIcon from "../../../icons/cart.png";
+
+import search from "../../../icons/8.svg";
+import cartIcon from "../../../icons/7.svg";
 
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
         <div>
             <nav className="flex justify-between max-w-6xl mx-auto py-2">
                 <ul>
-                    <li className="w-2/4"><NavLink to={'/'}><img src={logo} /></NavLink></li>
+                    <li className="w-2/4"><NavLink to={'/'}><img src="https://i.ibb.co/vhf9ZFZ/Group-2.png" /></NavLink></li>
                 </ul>
                 <ul className="flex gap-4 items-center">
                     <li><NavLink to={'/'}>Home</NavLink></li>

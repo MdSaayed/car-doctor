@@ -19,3 +19,11 @@
     border: 1px solid #FF3811;
     transition: 0.5ms;
 }
+
+.icon {
+    background-color: #F5F5F8;
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 2rem;
+  }
+  

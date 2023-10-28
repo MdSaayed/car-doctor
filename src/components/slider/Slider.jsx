@@ -42,7 +42,7 @@ const Slider = () => {
                 <div className='relative'>
                     <div className='bg-black bg-opacity-50 w-full h-full absolute'></div>
                     <img className='h-full w-full' src='https://i.ibb.co/M2kym9X/5.jpg' alt="" />
-                    <div className='absolute top-[18%] left-24 space-y-8'>
+                    <div className='absolute top-[18%] left-24 space-y-8  max-w-6xl mx-auto'>
                         <h2 className='top-300px text-5xl leading-[60px] leading-18 text-white font-bold z-50'>Affordable<br /> Price For Car <br /> Servicing</h2>
                         <p className='text-white text-xl tracking-widest'>There are many variations of passages of  available, but <br /> the majority have suffered alteration in some form</p>
                         <div>

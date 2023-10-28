@@ -1,0 +1,29 @@
+[
+    {
+        "name": "John Smith",
+        "image_url": "https://i.ibb.co/BTB2WnB/Rectangle-7-4.png",
+        "social_links": {
+            "linkedin": "https://www.linkedin.com/in/johnsmith",
+            "twitter": "https://twitter.com/johnsmith",
+            "facebook": "https://www.facebook.com/johnsmith"
+        }
+    },
+    {
+        "name": "Jane Doe",
+        "image_url": "https://i.ibb.co/4mJ299J/Rectangle-7-3.png",
+        "social_links": {
+            "linkedin": "https://www.linkedin.com/in/janedoe",
+            "twitter": "https://twitter.com/janedoe",
+            "instagram": "https://www.instagram.com/janedoe"
+        }
+    },
+    {
+        "name": "David Johnson",
+        "image_url": "https://i.ibb.co/HKZLWY4/Rectangle-7-5.png",
+        "social_links": {
+            "linkedin": "https://www.linkedin.com/in/davidjohnson",
+            "twitter": "https://twitter.com/davidjohnson",
+            "github": "https://github.com/davidjohnson"
+        }
+    }
+]
