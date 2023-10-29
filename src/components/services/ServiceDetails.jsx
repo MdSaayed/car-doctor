@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
-// import { FaBeer } from 'react-icons/fa';
+import { AiOutlineArrowRight } from 'react-icons/ai';
 
 
 
 const ServiceDetails = () => {
     const loadedData = useLoaderData();
-    const { package_name, img, description, price } = loadedData;
+    const { package_name, img, description, price, _id } = loadedData;
     const [services, setServices] = useState([]);
 
     useEffect(() => {
@@ -57,7 +57,7 @@ const ServiceDetails = () => {
                                             <Link className="text-[#A2A2A2]">Download</Link>
                                         </div>
                                         <div>
-                                            <Link className="bg-[#FF3811] px-1 rounded-sm">--</Link>
+                                            <Link className="bg-[#FF3811] block text-white px-2 py-1 rounded-sm"><AiOutlineArrowRight /></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -71,7 +71,7 @@ const ServiceDetails = () => {
                                             <Link className="text-[#A2A2A2]">Download</Link>
                                         </div>
                                         <div>
-                                            <Link className="bg-[#FF3811] px-1 rounded-sm">--</Link>
+                                            <Link className="bg-[#FF3811] block text-white px-2 py-1 rounded-sm"><AiOutlineArrowRight /></Link>
                                         </div>
                                     </div>
                                 </div>
@@ -89,7 +89,7 @@ const ServiceDetails = () => {
                     </div>
                     <div>
                         <p className="font-bold text-2xl text-[#151515] mb-4">Price ${price}.00</p>
-                        <button className="bg-[#FF3811] p-2 w-full rounded text-white">Proceed Checkout</button>
+                        <Link to={`/checkout/${_id}`}><button className="bg-[#FF3811] p-2 w-full rounded text-white">Proceed Checkout</button></Link>
                     </div>
                 </div>
             </div>

@@ -1,12 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
 import { BiLogoFacebook, BiLogoGoogle } from 'react-icons/bi';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 const Signin = () => {
     const { userSignin } = useContext(AuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const handleSignin = (e) => {
         e.preventDefault();
@@ -15,7 +18,16 @@ const Signin = () => {
         const password = form.password.value;
 
         userSignin(email, password)
-            .then(res => toast.success('Signin successfully.'))
+            .then(res => {
+                toast.success('Signin successfully.');
+                const user = { email }
+                axios.post('http://localhost:5000/jwt', user, { withCredentials: true })
+                    .then(res => {
+                        if (res.data.success) {
+                            location.state ? navigate(location.state) : navigate('/');
+                        }
+                    })
+            })
             .catch(err => console.log(err));
     }
 

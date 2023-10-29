@@ -7,6 +7,9 @@ import ServiceDetails from "../components/services/ServiceDetails";
 import Checkout from "../pages/Checkout";
 import Error from "../pages/404";
 import AddServices from "../components/services/addServices";
+import Bookings from "../pages/Bookings/Bookings";
+import PrivateRout from "./PrivateRout";
+import Services from "../components/services/Services";
 
 
 const router = createBrowserRouter([
@@ -30,15 +33,20 @@ const router = createBrowserRouter([
       {
         path: '/services/:id',
         element: <ServiceDetails />,
-        loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+        loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
       },
       {
         path: '/addService',
         element: <AddServices />
       },
       {
-        path: '/checkout',
-        element: <Checkout />
+        path: '/checkout/:id',
+        element: <PrivateRout><Checkout /></PrivateRout>,
+        loader: ({ params }) => fetch(`http://localhost:5000/services/${params.id}`)
+      },
+      {
+        path: '/bookings',
+        element: <PrivateRout><Bookings /></PrivateRout>
       }
     ]
   },
